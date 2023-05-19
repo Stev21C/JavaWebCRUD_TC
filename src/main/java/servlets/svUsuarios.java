@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import logica.Controladora;
 import logica.Usuario;
 
 
@@ -23,6 +24,7 @@ import logica.Usuario;
  */
 @WebServlet(name = "svUsuarios", urlPatterns = {"/svUsuarios"})
 public class svUsuarios extends HttpServlet {
+    Controladora control = new Controladora(); // Post y Get para traer usuarios que necesitemos
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -52,8 +54,7 @@ public class svUsuarios extends HttpServlet {
             throws ServletException, IOException {
 
         List<Usuario> listaUsuarios= new ArrayList<>();
-        listaUsuarios.add(new Usuario("1036","Steven", "Correa","322540"));
-        listaUsuarios.add(new Usuario("0123", "Primero", "Usuario","1111111"));
+        listaUsuarios= control.leerUsuarios();
         
         HttpSession miSesion= request.getSession();
         miSesion.setAttribute("listaUsuarios", listaUsuarios);
@@ -77,7 +78,14 @@ public class svUsuarios extends HttpServlet {
             String apellido= request.getParameter("apellido");
             String telefono= request.getParameter("telefono");
             
-            System.out.println(cedula+ nombre+ apellido+telefono);
+            Usuario usr= new Usuario();
+            usr.setCedula(cedula);
+            usr.setNombre(nombre);
+            usr.setApellido(apellido);
+            usr.setTelefono(telefono);
+            
+            control.crearUsuario(usr);
+            response.sendRedirect("index.jsp");
     }
 
     /**

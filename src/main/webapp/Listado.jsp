@@ -18,7 +18,7 @@
     </head>
     <body>
         <form class="container-sm col-xl-7 col-lg-8 col-md-9 col-11 mt-2  border rounded-4">
-            <h1 class="mt-2 mb-4">Listado de usuarios registrados</h1>
+            <h1 class="mt-2 mb-4 text-center">Listado de usuarios registrados</h1>
             
             <% 
                 List<Usuario> listaUsuarios = (List) request.getSession().getAttribute("listaUsuarios");

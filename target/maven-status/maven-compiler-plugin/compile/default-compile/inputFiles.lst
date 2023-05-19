@@ -1,2 +1,8 @@
+D:\Codigos\JavaWeb_TodoCode\src\main\java\logica\Controladora.java
+D:\Codigos\JavaWeb_TodoCode\src\main\java\persitencia\exceptions\IllegalOrphanException.java
+D:\Codigos\JavaWeb_TodoCode\src\main\java\persitencia\exceptions\PreexistingEntityException.java
+D:\Codigos\JavaWeb_TodoCode\src\main\java\persistencia\ControladoraPersistencia.java
 D:\Codigos\JavaWeb_TodoCode\src\main\java\logica\Usuario.java
 D:\Codigos\JavaWeb_TodoCode\src\main\java\servlets\svUsuarios.java
+D:\Codigos\JavaWeb_TodoCode\src\main\java\persitencia\exceptions\NonexistentEntityException.java
+D:\Codigos\JavaWeb_TodoCode\src\main\java\persistencia\UsuarioJpaController.java

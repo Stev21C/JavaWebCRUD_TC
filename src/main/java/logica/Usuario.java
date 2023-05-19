@@ -4,12 +4,22 @@
  */
 package logica;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author Steven
  */
-public class Usuario {
+@Entity
+public class Usuario implements Serializable {
     
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
     private String cedula;
     private String nombre;
     private String apellido;
@@ -18,12 +28,24 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String cedula, String nombre, String apellido, String telefono) {
+    public Usuario(int id, String cedula, String nombre, String apellido, String telefono) {
+        
+        this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
     }
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public String getCedula() {
         return cedula;
