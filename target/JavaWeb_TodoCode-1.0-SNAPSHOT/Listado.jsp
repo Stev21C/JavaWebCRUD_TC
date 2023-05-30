@@ -27,12 +27,20 @@
                 for(Usuario u: listaUsuarios){
             %>
             
-                    <p><b>Cliente: <%=cont%></b></p>
-                    <p>Cedula: <%=u.getCedula()%></p>
-                    <p>Nombre:<%=u.getNombre()%></p>
-                    <p>Apellido: <%=u.getApellido()%></p>
-                    <p>Telefono: <%=u.getTelefono()%></p>
-                    <p>------------------------------------------</p>
+             <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"> <p><b>Cliente: <%=cont%></b></p> </h5>
+                        <p class="card-text">Id: <%=u.getId()%></p>
+                        <p class="card-text">Cedula: <%=u.getCedula()%></p>
+                        <p class="card-text">Nombre: <%=u.getNombre()%></p>
+                        <p class="card-text">Apellido: <%=u.getApellido()%></p>
+                        <p class="card-text">Telefono: <%=u.getTelefono()%></p>
+                    </div>   
+              </div>
+            
+
+                    
+
             
 
             <%    

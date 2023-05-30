@@ -51,7 +51,7 @@ public class svUsuarios extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
 
         List<Usuario> listaUsuarios= new ArrayList<>();
         listaUsuarios= control.leerUsuarios();

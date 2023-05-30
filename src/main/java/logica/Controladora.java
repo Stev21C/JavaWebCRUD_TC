@@ -26,5 +26,18 @@ public class Controladora {
         return controlPersistencia.leerUsuarios();
     }
 
+    public void borrarUsuario(int idEliminar) {
+       controlPersistencia.borrarUsuario(idEliminar);
+       
+    }
+
+    public Usuario leerUsuario(int idEditar) {
+        return controlPersistencia.traerUsuario(idEditar);
+    }
+
+    public void editarUsuario(Usuario usr) {
+       controlPersistencia.editarUsuario(usr);
+    }
+
     
 }

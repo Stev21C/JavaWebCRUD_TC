@@ -16,8 +16,8 @@
     <body>
         <div class="mt-2 container-sm col-xl-7 col-lg-8 col-md-9 col-11 border rounded-4">
             <form action="svUsuarios" method="POST">
-                <h2 class="mt-2 mb-4">Datos de usuario</h2>
-                <!-- Email input -->
+                <h3 class="mt-2 mb-4">Datos de usuario</h3>
+                <!-- Cedula input -->
                 <div class="form-outline mb-2">
                   <input type="text" name="cedula" class="form-control">
                   <label class="form-label" for="form1Example1">Cedula</label>
@@ -43,18 +43,51 @@
                 <button type="submit" class="btn btn-primary btn-block mb-2">Enviar</button>
 
             </form>
-            
-            
-            
+         
         </div>
         
         
         <div class="mt-2 container-sm col-xl-7 col-lg-8 col-md-9 col-11 border rounded-4">
                     <form action="svUsuarios" method="GET">
-                         <h2 class="mt-2 mb-4">Listado de Usuarios</h2>
+                         <h3 class="mt-2 mb-4">Listado de Usuarios</h3>
                         <button type="submit" class="btn btn-info mt-2 mb-4">Ver listado de usuarios</button>
                     </form>
-            </div>
+        </div>
+        
+        <div class="mt-2 container-sm col-xl-7 col-lg-8 col-md-9 col-11 border rounded-4">
+
+                    <h3 class="mt-2 mb-4">Eliminar Usuarios</h3>
+
+                    <form action="svEliminar" method="POST">
+                        <div class="row">
+                                <div class="col-auto">
+                                    <label class="col-form-label">Ingrese Id: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="idUsuario">
+                                </div>
+                        </div>
+                        <button type="submit" class="btn btn-info mt-4 mb-4">Eliminar Usuario</button>
+                    </form>
+        </div>
+        
+        
+        <div class="mt-2 container-sm col-xl-7 col-lg-8 col-md-9 col-11 border rounded-4">
+
+                    <h3 class="mt-2 mb-4">Editar Usuarios</h3>
+
+                    <form action="svEditar" method="GET">
+                        <div class="row">
+                                <div class="col-auto">
+                                    <label class="col-form-label">Ingrese Id: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="idUsuarioEdit">
+                                </div>
+                        </div>
+                        <button type="submit" class="btn btn-info mt-4 mb-4">Editar Usuario</button>
+                    </form>
+        </div>
         
         
         
